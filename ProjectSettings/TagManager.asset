@@ -8,6 +8,8 @@ TagManager:
   - Glass
   - Wood
   - Metal
+  - Stick
+  - Table
   layers:
   - Default
   - TransparentFX
