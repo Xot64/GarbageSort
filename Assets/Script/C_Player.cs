@@ -23,8 +23,11 @@ public class C_Player : MonoBehaviour
             Physics.Raycast(ray, out hit);
             if (hit.collider.tag == "Stick")
             {
-                stick = hit.collider.gameObject;
-                stick.GetComponent<Rigidbody>().useGravity = false;
+                if (hit.collider.GetComponent<C_Stick>().canTake() == null)
+                {
+                    stick = hit.collider.gameObject;
+                    stick.GetComponent<Rigidbody>().useGravity = false;
+                }
             }
         }
         if ((Input.GetButton("Fire1")) && (stick != null))
