@@ -39,7 +39,7 @@ public class C_Player : MonoBehaviour
             stick.GetComponent<Transform>().position = gameObject.GetComponent<Transform>().position + d * k;
 
         }
-        if (Input.GetButtonUp("Fire1"))
+        if ((Input.GetButtonUp("Fire1")) && (stick != null))
         {
             stick.GetComponent<Rigidbody>().useGravity = true;
             stick = null;
